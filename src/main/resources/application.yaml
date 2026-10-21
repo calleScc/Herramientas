@@ -1,0 +1,28 @@
+server:
+  port: 8081
+  error:
+    include-message: always
+Spring:
+  application:
+    name: Herramientas
+  flyway:
+    enable: true
+    baselineversion: 1
+    locations:
+      classpath: db/migration
+    sqlmigrationsuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+  datasource:
+    url: jdbc:postgresql://localhost:5432/herramientas
+    username: postgres
+    password: hola123
+    driver-Class-Name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
