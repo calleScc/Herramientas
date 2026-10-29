@@ -5,4 +5,7 @@ import org.springframework.stereotype.Repository
 import suda.com.herramientas.model.Product
 
 @Repository
-interface ProductRepository : JpaRepository<Product, Int>
+interface ProductRepository : JpaRepository<Product, Int>{
+
+    fun save(product: Product): Product
+}

@@ -17,15 +17,6 @@ import suda.com.herramientas.service.ProductService
 @RequestMapping("/api/products")
 class ProductController(private val productService: ProductService) {
 
-    @GetMapping("/hola")
-    fun saludo(): String = "Hola mundo"
-
-    @GetMapping("/adios")
-    fun despedida(): String = "Adios mundo"
-
-    @GetMapping("/saludoService")
-    fun saludoService(): String = productService.saludoService()
-
     @GetMapping
     fun listar(): List<Product> = productService.listar()
 

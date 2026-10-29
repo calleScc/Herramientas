@@ -7,10 +7,6 @@ import suda.com.herramientas.repository.ProductRepository
 @Service
 class ProductService(private val productRepository: ProductRepository) {
 
-    fun saludoService(): String {
-        return "Hola desde el Service"
-    }
-
     fun listar(): List<Product> {
         return productRepository.findAll()
     }
