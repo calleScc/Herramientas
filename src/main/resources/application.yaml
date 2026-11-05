@@ -26,3 +26,9 @@ Spring:
     properties:
       hibernate:
         format_sql: true
+app:
+    secondary-datasource:
+       url: jdbc:postgresql://localhost:5432/herramientas2
+       username: postgres
+       password: hola123
+       driver-class-name: org.postgresql.Driver
