@@ -22,6 +22,7 @@ class ProductService(private val productRepository: ProductRepository) {
 
     fun actualizar(id: Int, datos: Product): Product? {
         val existente = productRepository.findById(id).orElse(null) ?: return null
+        existente.name = datos.name
         existente.description = datos.description
         existente.price = datos.price
         existente.stock = datos.stock

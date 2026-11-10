@@ -14,6 +14,9 @@ class Product(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Int? = null,
 
+    @Column(name = "name", length = 100)
+    var name: String = "",
+
     @Column(name = "description", length = 100)
     var description: String = "",
 
